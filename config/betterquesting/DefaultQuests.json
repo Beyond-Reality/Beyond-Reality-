@@ -156,7 +156,7 @@
     {
       "questID": 2,
       "name": "Combusting materials",
-      "description": "No Description",
+      "description": "The beginnings of iron ingot always start with an iron furnace.",
       "isMain": false,
       "isSilent": false,
       "lockedProgress": false,
@@ -299,7 +299,7 @@
     {
       "questID": 4,
       "name": "Water gun",
-      "description": "No Description",
+      "description": "This gun is a special gun, it can extract water from humid materials.",
       "isMain": false,
       "isSilent": false,
       "lockedProgress": false,
@@ -372,7 +372,7 @@
     {
       "questID": 5,
       "name": "Let it ... BURN!",
-      "description": "No Description",
+      "description": "You are able to melt blazes, it seems that it is impossible but you can never know in here what it work. ",
       "isMain": false,
       "isSilent": false,
       "lockedProgress": false,
@@ -453,7 +453,7 @@
     {
       "questID": 6,
       "name": "Real ingots",
-      "description": "No Description",
+      "description": "To progress through the simulation you will need to get some materials first, a good way to start is by melting shards into the crucible, but that will give you dirty molten metal (it will slower to cool off). You can purify it and it will turn into an ingot §l10§r times faster.",
       "isMain": false,
       "isSilent": false,
       "lockedProgress": false,
@@ -570,7 +570,7 @@
     {
       "questID": 7,
       "name": "Gems are truly, truly, truly §doutrageous§r.",
-      "description": "No Description",
+      "description": "They are so pretty, right? Too bad they are fake.",
       "isMain": false,
       "isSilent": false,
       "lockedProgress": false,
@@ -635,7 +635,31 @@
           "taskID": "bq_standard:retrieval"
         }
       ],
-      "rewards": [],
+      "rewards": [
+        {
+          "choices": [
+            {
+              "id": "minecraft:diamond",
+              "Count": 2,
+              "OreDict": "",
+              "Damage": 0
+            },
+            {
+              "id": "bq_standard:loot_chest",
+              "Count": 1,
+              "OreDict": "",
+              "Damage": 25
+            },
+            {
+              "id": "minecraft:emerald",
+              "Count": 1,
+              "OreDict": "",
+              "Damage": 0
+            }
+          ],
+          "rewardID": "bq_standard:choice"
+        }
+      ],
       "preRequisites": [
         6
       ]
@@ -643,7 +667,7 @@
     {
       "questID": 8,
       "name": "Master TreePuncher",
-      "description": "No Description",
+      "description": "As you might noticed, the simulation crashes when you place a block over the void. Capsule corporation removed that function to prevent that error, until our developers fix it you will need to expand with this Biome Crystals. §o(ETA: Year 2042)",
       "isMain": false,
       "isSilent": false,
       "lockedProgress": false,
@@ -652,7 +676,7 @@
       "globalQuest": false,
       "globalShare": true,
       "autoClaim": false,
-      "repeatTime": -1,
+      "repeatTime": 100000000,
       "sounds": {
         "complete": "random.levelup",
         "update": "random.levelup"
@@ -701,9 +725,118 @@
           "taskID": "bq_standard:retrieval"
         }
       ],
-      "rewards": [],
+      "rewards": [
+        {
+          "rewards": [
+            {
+              "id": "terraincrystals:terrainCrystalMesa",
+              "Count": 1,
+              "OreDict": "",
+              "Damage": 0
+            }
+          ],
+          "rewardID": "bq_standard:item"
+        }
+      ],
       "preRequisites": [
         1
+      ]
+    },
+    {
+      "questID": 9,
+      "name": "That\u0027s some dirty water",
+      "description": "The corporation is pumping their waste into the simulation, it seems it\u0027s not againts the law. The good part is that you can get something out of it.",
+      "isMain": false,
+      "isSilent": false,
+      "lockedProgress": false,
+      "simultaneous": false,
+      "globalParticipation": 0.0,
+      "globalQuest": false,
+      "globalShare": true,
+      "autoClaim": false,
+      "repeatTime": -1,
+      "sounds": {
+        "complete": "random.levelup",
+        "update": "random.levelup"
+      },
+      "logic": "AND",
+      "taskLogic": "AND",
+      "icon": {
+        "id": "waterstrainer:strainer_survivalist",
+        "Count": 1,
+        "OreDict": "",
+        "Damage": 0
+      },
+      "visibility": "NORMAL",
+      "tasks": [
+        {
+          "partialMatch": true,
+          "ignoreNBT": false,
+          "requiredItems": [
+            {
+              "id": "waterstrainer:strainer_base",
+              "Count": 1,
+              "OreDict": "",
+              "Damage": 0
+            },
+            {
+              "id": "waterstrainer:strainer_survivalist",
+              "Count": 1,
+              "OreDict": "",
+              "Damage": 0
+            }
+          ],
+          "taskID": "bq_standard:crafting"
+        },
+        {
+          "partialMatch": true,
+          "ignoreNBT": false,
+          "consume": false,
+          "autoConsume": false,
+          "requiredItems": [
+            {
+              "id": "minecraft:string",
+              "Count": 8,
+              "OreDict": "",
+              "Damage": 0
+            },
+            {
+              "id": "minecraft:clay_ball",
+              "Count": 16,
+              "OreDict": "",
+              "Damage": 0
+            },
+            {
+              "id": "minecraft:gold_nugget",
+              "Count": 8,
+              "OreDict": "",
+              "Damage": 0
+            }
+          ],
+          "taskID": "bq_standard:retrieval"
+        }
+      ],
+      "rewards": [
+        {
+          "rewards": [
+            {
+              "id": "terraincrystals:terrainCrystalMesa",
+              "Count": 1,
+              "OreDict": "",
+              "Damage": 0
+            },
+            {
+              "id": "bq_standard:loot_chest",
+              "Count": 1,
+              "OreDict": "",
+              "Damage": 0
+            }
+          ],
+          "rewardID": "bq_standard:item"
+        }
+      ],
+      "preRequisites": [
+        4
       ]
     }
   ],
@@ -756,6 +889,11 @@
           "id": 8,
           "x": 144,
           "y": 48
+        },
+        {
+          "id": 9,
+          "x": 0,
+          "y": 192
         }
       ]
     }
