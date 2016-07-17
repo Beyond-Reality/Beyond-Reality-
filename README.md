@@ -14,3 +14,4 @@ A 1.10 Modpack
 |Better Questing - Standar Expansion|	http://minecraft.curseforge.com/projects/better-questing-standard-expansion |	YES|
 |Terrain Crystals |	http://minecraft.curseforge.com/projects/terrain-crystals	|YES|
 |Water Strainer	| http://minecraft.curseforge.com/projects/water-strainer	|YES|
+|CraftTweaker | http://minecraft.curseforge.com/projects/crafttweaker?gameCategorySlug=mc-mods&projectID=239197	|YES|
